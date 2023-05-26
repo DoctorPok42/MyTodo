@@ -1,0 +1,126 @@
+.containercolumn {
+  width: 350px;
+  height: calc(100vh - 200px);
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 5px;
+  margin: 0 5px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  transition: var(--transition);
+
+  .head {
+    max-width: 100%;
+    height: 50px;
+    background-color: #f6f8fa;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 16px 16px;
+    position: sticky;
+    top: 0;
+    transition: var(--transition);
+
+
+    p {
+      width: 18px;
+      height: 18px;
+      clip-path: circle(40%);
+      margin-right: 8px;
+    }
+
+    .title {
+      h1 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--black);
+      }
+    }
+
+    .nb_tasks {
+      margin-left: 8px;
+      min-width: 10px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(175, 184, 193, 0.2);
+      border-radius: 10px;
+      padding: 4px;
+
+      span {
+        font-size: 12px;
+        font-weight: 1;
+        color: #57606a;
+      }
+    }
+
+    .description {
+      width: 100%;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: 8px;
+
+      span {
+        font-weight: 1;
+        color: #57606a;
+      }
+    }
+
+  }
+  .todos {
+    width: 100%;
+    height: 100%;
+    padding: 16px 8px;
+    overflow-y: auto;
+    transition: var(--transition);
+    position: relative;
+
+    .dropzone {
+      width: calc(100% - 16px);
+      height: 75px;
+      display: flex;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      box-shadow: 0 0 0 2px var(--logo-color);
+      cursor: grabbing;
+      user-select: none;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+body[light-mode="dark"] .containercolumn{
+  background-color: #010409;
+  border: 1px solid #0d1014;
+
+  .head {
+    background-color: #010409;
+
+    .nb_tasks {
+      background-color: #2d3139;
+
+      .span {
+        color: #8b949e;
+      }
+    }
+
+    .title {
+      h1 {
+        color: #c9d1d9;
+      }
+    }
+  }
+  .description {
+    span {
+      color: #c9d1d9;
+    }
+  }
+}

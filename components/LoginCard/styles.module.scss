@@ -1,0 +1,216 @@
+.containerLoginCard {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .goback {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--blue-dark);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .goback:hover {
+    transform: scale(1.1);
+    font-size: 1.8em;
+  }
+
+  .loginCard {
+    width: 30%;
+    min-height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(43, 43, 43, 0.8);
+
+    .loginCard_title {
+      font-size: 30px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      margin-top: 20px;
+      user-select: none;
+      color: var(--blue-dark);
+    }
+
+    .loginCard_form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+
+      .loginCard_form_input {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        label {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: var(--blue-dark);
+        }
+
+        input {
+          width: 100%;
+          height: 40px;
+          border: 2px solid var(--blue-light);
+          border-radius: 5px;
+          padding: 0 10px;
+          font-size: 20px;
+          outline: none;
+          transition: 0.2s all linear;
+        }
+
+        input::selection {
+          background: var(--white);
+          color: var(--black);
+        }
+
+        input:hover {
+          border: 2px solid var(--white);
+          box-shadow: 0 0 0 2px var(--logo-color);
+          background: var(--logo-color);
+          color: var(--white);
+        }
+
+        input:focus {
+          border: 2px solid var(--white);
+          box-shadow: 0 0 0 2px var(--logo-color);
+          background: var(--logo-color);
+          color: var(--white);
+        }
+      }
+
+      .loginCard_form_button {
+        .loginCard_form_button_submit {
+          min-width: 7rem;
+          height: 40px;
+          padding: 0 2rem;
+          border-radius: 5px;
+          background: var(--blue-light);
+          color: #fff;
+          font-size: 20px;
+          font-weight: 600;
+          cursor: pointer;
+          outline: none;
+          user-select: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.2s all ease-in-out;
+          position: relative;
+          border: none;
+
+          &:hover {
+            background: var(--blue-dark);
+          }
+
+          .circle {
+            position: absolute;
+            right: 15px;
+          }
+        }
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--blue-dark);
+        margin-top: 20px;
+        user-select: none;
+
+        a {
+          color: var(--blue-dark);
+          text-decoration: none;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+body[light-mode="dark"] .containerLoginCard {
+  .goback {
+    color: red;
+    background: red;
+  }
+
+  .loginCard {
+    box-shadow: 0 0 10px 0 rgba(187, 185, 185, 0.8);
+    .loginCard_title {
+      color: red;
+    }
+    .loginCard_form {
+      .loginCard_form_input {
+        label {
+          color: red;
+        }
+        input {
+          border: 2px solid red;
+        }
+        input::selection {
+          background: green;
+          color: blue;
+        }
+
+        input:hover {
+          border: 2px solid red;
+          box-shadow: 0 0 0 2px green;
+          background: blue;
+          color: yellow;
+        }
+
+        input:focus {
+          border: 2px solid red;
+          box-shadow: 0 0 0 2px green;
+          background: blue;
+          color: yellow;
+        }
+      }
+      .loginCard_form_button {
+        .loginCard_form_button_submit {
+          background: var(--blue-dark);
+          color: red;
+          &:hover {
+            background: purple;
+          }
+        }
+      }
+      span {
+        color: var(--blue-light);
+        a {
+          color: var(--blue-light);
+        }
+      }
+    }
+  }
+}

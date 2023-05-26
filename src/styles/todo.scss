@@ -1,0 +1,14 @@
+.todos {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    position: relative;
+}
+
+body[light-mode="dark"] .todos {
+    background-color: #161b22;
+    position: relative;
+}

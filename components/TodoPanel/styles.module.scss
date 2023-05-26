@@ -1,0 +1,370 @@
+.containertodopanel {
+  width: 100%;
+  height: 88vh;
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  background-color: rgba(175, 184, 193, 0.2);
+  transition: var(--transition);
+
+  .contenttodopanel {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 12px 0 0 12px;
+    box-shadow: rgba(140, 149, 159, 0.15) 0px 3px 6px;
+    flex-direction: column;
+    overflow: hidden;
+
+    .head {
+      width: 100%;
+      height: 12vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 16px 24px 16px 24px;
+      border-bottom: 1px solid #d8dee4;
+      overflow: hidden;
+
+      .close {
+        width: 100%;
+        height: 0%;
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .icon {
+          width: 28px;
+          height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          background-color: #ffffff;
+          margin-right: 48px;
+          transform: scale(1.2);
+          cursor: pointer;
+
+          svg {
+            fill: #57606a;
+          }
+        }
+
+        .icon:hover {
+          background-color: #f5f8fa;
+        }
+      }
+
+      .title {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        h2 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: 600;
+          color: #24292f;
+
+          span {
+            font-size: 24px;
+            font-weight: 1;
+            color: #57606a
+          }
+        }
+
+        .edit {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 5px;
+          padding: 4.5px 8px;
+          border: 1px solid #d0d7de;
+          background-color: rgba(216, 222, 228, 0.2);
+          cursor: pointer;
+          position: absolute;
+          right: 22px;
+          transition: 0.2s;
+
+          svg {
+            fill: #57606a;
+          }
+
+          span {
+            margin: 0;
+            margin-left: 4px;
+            font-size: 14px;
+            font-weight: 1;
+            color: #24292f;
+          }
+        }
+
+        .edit:hover {
+          background-color: rgba(216, 222, 228, 0.5);
+        }
+      }
+
+      .infos {
+        width: 100%;
+        min-height: 10%;
+        margin-top: -12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        .status {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 50px;
+          margin-right: 8px;
+          padding: 4.5px 8px;
+
+          span {
+            margin-left: 4px;
+            font-size: 12px;
+            font-weight: 1;
+            color: #ffffff;
+          }
+        }
+
+        .date {
+          margin-left: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 50px;
+          color: #24292f;
+
+          #dateformat {
+            font-weight: 1;
+            color: #57606a;
+          }
+        }
+
+        .loading {
+          width: 10%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          right: 34px;
+
+          span {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+
+    .description {
+      width: 60%;
+      height: calc(100% - 15vh);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 16px;
+      overflow: hidden;
+      background-color: #f6f8fa;
+      border-right: 1px solid #d8dee4;
+      position: relative;
+    }
+
+    .containerinfos {
+      width: 34.4%;
+      height: calc(100% - 18vh);
+      position: absolute;
+      top: 15.6vh;
+      right: 0;
+      padding: 16px;
+      margin-top: 15px;
+
+      .date_infos {
+        width: 100%;
+        display: flex;
+
+        .title {
+          margin: 0;
+          width: 50%;
+          font-size: 12px;
+          font-weight: 1;
+          color: #24292f;
+        }
+
+        Input {
+          margin-top: 4%;
+          width: 90% !important;
+        }
+      }
+
+      .status {
+        width: 100%;
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .title {
+          margin: 0;
+          width: 50%;
+          font-size: 12px;
+          font-weight: 1;
+          color: #24292f;
+        }
+
+        .selects {
+          width: 100%;
+        }
+
+        .selects:focus {
+          box-shadow: rgba(140, 149, 159, 0.15) 0px 3px 6px !important;
+        }
+
+        Select {
+          background-color: red !important;
+        }
+
+        Select:hover {
+          border: 1px solid var(--logo-color) !important;
+        }
+      }
+
+      .other {
+        margin-top: 28px;
+        border-top: 2px solid #d8dee4;
+
+        .delete,
+        .button {
+          width: calc(100% - 16px);
+          margin-top: 28px;
+          padding: 6px 8px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          border-radius: 5px;
+          transition: 0.2s;
+
+          h2 {
+            margin: 0;
+            width: 50%;
+            margin-left: 8px;
+            font-size: 16px;
+            font-weight: 1;
+            color: #b35900;
+            cursor: pointer;
+          }
+        }
+
+        .button {
+          margin-top: 0px;
+
+          h2 {
+            color: var(--logo-color);
+          }
+        }
+
+        .delete:hover {
+          background-color: rgba(179, 89, 0, 0.1);
+        }
+
+        .button:hover {
+          background-color: rgba(82, 113, 255, 0.1);
+        }
+      }
+    }
+  }
+}
+
+body[light-mode="dark"] .containertodopanel {
+  .contenttodopanel {
+    background-color: #0d1117;
+    .head {
+      border-bottom: 1px solid #21262d;
+      .close {
+        .icon {
+          background-color: #0d1117;
+        }
+
+        .icon:hover {
+          background-color: #1c2128;
+        }
+      }
+      .title {
+        h2 {
+          color: #ffffff;
+        }
+        .edit {
+          border: 1px solid #161b22;
+          background-color: rgba(216, 222, 228, 0.2);
+
+          svg {
+            fill: #ffffff;
+          }
+
+          span {
+            color: #ffffff;
+          }
+        }
+        .edit:hover {
+          background-color: rgba(229, 233, 238, 0.5);
+        }
+      }
+      .infos {
+        .date {
+          color: #ffffff;
+        }
+
+        .loading {
+          svg {
+            fill: #ffffff;
+          }
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .description {
+      background-color: #161b22;
+      border-right: 1px solid #30363d;
+    }
+  }
+
+  .description {
+    background-color: #161b22;
+  }
+  .containerinfos {
+    .date_infos,
+    .status {
+      .title {
+        color: #c9d1d9;
+      }
+    }
+    .date_infos {
+      Input {
+        color: #ffffff;
+        background-color: #0d1117;
+        border: 1px solid #21262d;
+      }
+    }
+    .other {
+      border-top: 2px solid #30363d;
+    }
+  }
+}

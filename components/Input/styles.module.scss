@@ -1,0 +1,99 @@
+.container_input {
+  width: 100%;
+  transition: var(--transition);
+
+  .title {
+    margin: 0;
+    margin-left: 2px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 1;
+    color: #24292f;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .content {
+    width: 100%;
+    .input {
+      width: auto;
+      border: none;
+      border: 1px solid #d0d7de;
+      border-radius: 5px;
+      background-color: var(--white);
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 8px 12px;
+      transition: var(--transition);
+      cursor: pointer;
+      color: var(--black);
+      font-size: 0.9rem;
+      font-family: var(--font-family);
+    }
+
+    .textarea {
+      width: calc(100% - 36px);
+      min-height: 10rem;
+      max-height: 20rem;
+      border: none;
+      border: 1px solid #d0d7de;
+      border-radius: 5px;
+      background-color: var(--white);
+      display: flex;
+      align-items: flex-start;
+      padding: 18px;
+      transition: var(--transition);
+      resize: vertical;
+      font-size: 0.9rem;
+      font-family: var(--font-family);
+      font-weight: 1;
+      color: var(--black);
+      box-shadow: rgba(27, 31, 36, 0.04) 0px 1px 0px;
+    }
+
+    .input:hover,
+    .textarea:hover {
+      border: 1px solid var(--logo-color);
+    }
+
+    .input:focus,
+    .textarea:focus {
+      border: 1px solid var(--logo-color);
+      box-shadow: 0px 0px 4px 0px var(--logo-color);
+      outline: none;
+    }
+
+    .input::placeholder,
+    .textarea::placeholder {
+      color: var(--grey);
+      font-size: 0.9rem;
+      font-family: var(--font-family);
+    }
+  }
+}
+
+body[light-mode="dark"] .container_input {
+  .title {
+    color: #c9d1d9;
+  }
+
+  .content {
+    .input {
+      border: 1px solid #c9d1d9;
+      background-color: #0d1117;
+      transition: var(--transition);
+      color: #ffffff;
+    }
+
+    .textarea {
+      border: 1px solid #30363d;
+      background-color: #0d1117;
+      transition: var(--transition);
+      box-shadow: #30363d 0px 1px 0px;
+      color: #c9d1d9;
+    }
+  }
+}
