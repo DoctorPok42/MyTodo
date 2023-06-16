@@ -51,11 +51,13 @@ npm run dev
 
 1. Go to http://localhost:3000
 
-2. Login with your ssh credentials
+2. Create an account
 
-3. Upload your files
+3. Create a todo
 
-4. Enjoy your cloud
+4. Drag and drop the todo to the done section
+
+5. Enjoy your todo list!
 
 ## Tech
 
