@@ -76,4 +76,4 @@ npm run dev
 
 ## License
 
-[MIT](https://github.com/DoctorPok42/cloud/blob/develop/LICENSE)
+[MIT](https://github.com/DoctorPok42/MyTodo/blob/main/LICENSE)
